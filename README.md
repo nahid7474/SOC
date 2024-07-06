@@ -2,7 +2,7 @@ Project: Build Security Operations Center (SOC) with Microsoft
 ____________________________________________________________________________________
 High level summary:
 
-In this mini Security Operations Center (SOC) building project, I'll use Microsoft solutions leveraging a combination of tools and services designed to monitor, detect, and respond to security incidents within a Windows-centric environment.
+In this mini Security Operations Center (SOC) building project, I'll use Microsoft solutions leveraging a combination of tools and services designed to monitor, detect, and respond to security incidents. 
 
 Activities involve:
 
@@ -10,6 +10,14 @@ Activities involve:
 
 Windows Servers: Utilize Windows Server operating systems (Windows Server 2019) for hosting necessary services and tools.
 Active Directory (AD): Set up an Active Directory domain to manage user accounts, groups,  policies etc.
+
+**Deploy and Connect Microsoft Defender XDR to cover:**
+
+Microsoft Defender for Endpoint
+Microsoft Defender for Office 365
+Microsoft Defender for Cloud Apps
+Microsoft Defender for Identity
+Microsoft Defender Alerts
 
 **Monitoring and Logging**
 
@@ -24,14 +32,16 @@ Connectors: Will Use built-in connectors to ingest data from different services 
 Leverage automation and orchestration capabilities within Azure Sentinel for efficient incident response workflows.
 Automate threat response using Playbook and Automation Rules.
 
-**Deploy and Connect Microsoft Defender XDR to cover:**
-Microsoft Defender for Endpoint
-Microsoft Defender for Office 365
-Microsoft Defender for Cloud Apps
-Microsoft Defender for Identity
-Microsoft Defender Alerts
-
 
 **Azure Firewall:**
 Deploy Azure Firewall to protect my virtual networks and control traffic flows.
 _______________________________________________________________________________________
+
+**Infrastructure Setup**
+This has been completed here https://github.com/nahid7474/AD
+
+
+Tenaant Setup: 
+
+
+**Deploy and Connect Microsoft Defender XDR to cover:**

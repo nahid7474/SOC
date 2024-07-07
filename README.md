@@ -39,7 +39,8 @@ Activities involve:
 _______________________________________________________________________________________
 
 **Infrastructure Setup**
-I have documented all my activities related to this one here in a seperate project: https://github.com/nahid7474/AD
+
+I have documented all my infrastructure related activities here in a seperate project: https://github.com/nahid7474/AD
 
 **Microsoft Tenant and Azure Subscription set up** :
 

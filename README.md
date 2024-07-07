@@ -163,14 +163,24 @@ Click Finish, it's successfully done.
 
 
 Next, Create a Directory services accounts as per the second requirements for MDI.
-Click Add credentials.
+Click Add credentials, create the account.
 
 ![image](https://github.com/nahid7474/SOC/assets/170605912/3faeb990-d60c-4f4c-b1ff-31208474b8fc)
 
+Account is now showing up on the portal.
+
+![image](https://github.com/nahid7474/SOC/assets/170605912/e1618fc5-dfc4-4e79-aecb-8162e898058d)
 
 
-Create MDE account to sync with the portal 
-----------------------------------------------------------------------------------------------------------------------------------------
+MDI account is syncing my AD users on prem. I can veryfily that from the Entity tags > Sensitive area
+
+![image](https://github.com/nahid7474/SOC/assets/170605912/17e0d087-d804-48b9-8265-36252226b1f2)
+
+These accounts exists on my Domain Controller.
+
+![image](https://github.com/nahid7474/SOC/assets/170605912/5110ea85-ecae-4c13-bd20-b10d731198e0)
+
+
 **Monitoring and Logging** 
 - Will deploy and leverage Microsoft Sentinel SIEM
 - Create data collections rule, deploy agent to collect and forward security Event logs from endpoints
@@ -337,6 +347,18 @@ This proves that my detection analytics are working correctly.
 - **Deploy and Configure Azure Firewall, ingest logs in Microsoft Sentinel:**
     - I have completed a dedicated project on firewall deployment and configuration here on another repo: https://github.com/nahid7474/Firewall
  
-To ingest firewall log, 
+To ingest firewall log, navigate to Diagnostic settings under the firewall NahidHomeLabAzureFIrewall, click Add diagnostic settings
+
+![image](https://github.com/nahid7474/SOC/assets/170605912/1bff53eb-fb13-4284-bb40-a39fb4890ccc)
+
+select the logs that need to go to Sentinel.
+On the Destinatin details, check Send to Log Analytics workspace box, choose the subscription and HomeLab as my workspace.
+Destination table is Azure diagnostic.
+
+![image](https://github.com/nahid7474/SOC/assets/170605912/57f499d7-9375-4091-959d-a67a62c0216f)
+
+
+
+
 
 

@@ -31,7 +31,7 @@ Activities involve:
 - **Monitoring and Logging**
     - Will deploy and leverage Microsoft Sentinel SIEM
     - Create data collections rule, deploy agent to collect and forward security Event logs from endpoints
-    - Will integrate Microsoft and third-party produts/services with sentinel, collect and analyze security data using connectors
+    - Will integrate Microsoft and third-party produts/services with sentinel, collect data using connectors
 
 - **Threat Detection and Incident Response:** 
     - Deploy Out of Box Sentinel Analytics rule, create custom detection rule based on Mitre TTP 
@@ -354,8 +354,14 @@ To ingest firewall log, navigate to Diagnostic settings under the firewall Nahid
 select the logs that need to go to Sentinel.
 On the Destinatin details, check Send to Log Analytics workspace box, choose the subscription and HomeLab as my workspace.
 Destination table is Azure diagnostic.
+Give this diagnostic setting a name: MoveFIrewallLogsToNahidHomeLabWorkspace
 
-![image](https://github.com/nahid7474/SOC/assets/170605912/57f499d7-9375-4091-959d-a67a62c0216f)
+![image](https://github.com/nahid7474/SOC/assets/170605912/542dbc13-2732-4362-a18d-490afda899dd)
+
+To verify this settings is working, I'll go into Sentinel and run AzureDiagnostic KQL.
+And I can see results indicating that I am getting logs as I configured.
+
+![image](https://github.com/nahid7474/SOC/assets/170605912/36931189-e811-4cd9-8700-e722b6e9910a)
 
 
 

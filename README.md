@@ -137,5 +137,62 @@ Next is Microsoft XDR, Open the connector page
 
 ![image](https://github.com/nahid7474/SOC/assets/170605912/cb9a72fe-7020-463c-b520-2fff9840702c)
 
+On the instruction area, check that all prerewuisites are met 
+
+![image](https://github.com/nahid7474/SOC/assets/170605912/d54050b7-fd53-460b-a6bd-371a47ca990a)
+
+
+Under configuration, click Connect incidents & alerts.
+
+
+![image](https://github.com/nahid7474/SOC/assets/170605912/0b089c71-4a5f-4ddd-9254-6c7c8f2ef5bb)
+
+This will ingest all logs and create alerts/incidents that faill into Microsoft Defender XDR suite which includes:
+
+Microsoft Defender for Endpoint, Microsoft Defender for Identity, Microsoft Defender for Office 365, Microsoft Defender for Cloud Apps
+Microsoft Defender Alerts, Microsoft Defender Vulnerability Management, Microsoft Purview Data Loss Prevention, Microsoft Entra ID Protection
+
+![image](https://github.com/nahid7474/SOC/assets/170605912/09e224bd-0add-4af4-b125-29295a281c9d)
+
+
+To verify that I have configured the connector correctly, I can data are flowing/ingesting fro all these domain.
+
+![image](https://github.com/nahid7474/SOC/assets/170605912/18bf0e1c-0759-4637-914a-ed91a81f6d24)
+
+
+Similar way, I'll now configure Microsoft Entra ID data connector and make sure I am getting data from my Active Directory.
+I can now see that I have started getting data from Entra ID as well.
+
+![image](https://github.com/nahid7474/SOC/assets/170605912/93006cc6-cc32-4ce6-861b-663d9db2c751)
+
+
+Next, Collect windows security events via agent.
+First I ned a data collection rule, to get a rule go to the Log Analytics Workspace > Setting > Aents> Data Collection Rule.
+
+![image](https://github.com/nahid7474/SOC/assets/170605912/fd6a6e29-2247-40c7-ab35-fc21ddde7f53)
+
+Create a rule under the same subscription and resource group. 
+
+![image](https://github.com/nahid7474/SOC/assets/170605912/1b7245ad-a2dd-40d4-82d7-4cfa9de60dc0)
+
+
+Add data source, choose the events that need to ingested onto Sentinel, Next: Destination
+
+Add HomeLab Sentinel workspace and click Add data source 
+
+![image](https://github.com/nahid7474/SOC/assets/170605912/64ed45c6-543a-4e13-af9f-f08f95f38760)
+
+Now that I have data collection rule created, I'll go to te connector page for Windows Security Events via AMA and verify I am getting data.
+
+![image](https://github.com/nahid7474/SOC/assets/170605912/b5aa9119-33ec-4044-a66c-f2cb45c003cd)
+
+
+![image](https://github.com/nahid7474/SOC/assets/170605912/27401aa8-1b77-4db8-8849-70233e40c103)
+
+
+And I can see my connected VMs where these data are coming from.
+
+![image](https://github.com/nahid7474/SOC/assets/170605912/2ad36d58-3481-494d-b094-3852015f174b)
+
 
 

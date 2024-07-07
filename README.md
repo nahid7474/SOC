@@ -15,14 +15,14 @@ Activities involve:
     - Microsoft Defender Security Center
     - Microsoft Azure Portal
 
-- **Onboard a device to Microsoft Defender for Endpoint (MDE) using powershel script**
+- **Configure Defender for Endpoint (MDE)**
+    - Onboard device to Microsoft Defender for Endpoint (MDE) using powershel script
 
 - **Configure Defender for Identity**
     - Install Identity Senson on Domain Controler
     - Create MDE account to sync with the portal 
 
 - **Deploy and Connect Microsoft Defender XDR to cover:**
-
     - Microsoft Defender for Identity
     - Microsoft Defender for Endpoints
     - Microsoft Defender for Cloud Apps

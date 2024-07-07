@@ -4,7 +4,6 @@ In this mini Security Operations Center (SOC) building project, I'll use Microso
 
 Activities involve:
 
-
 - **Infrastructure Setup** :
     - Install and configure Windows Server 2019 with Active Directory, DHCP, DNS
     - Create Organizational Unit (OU), domain users, and configure NAT and routing
@@ -30,7 +29,6 @@ Activities involve:
     - Microsoft Defender Alerts
 
 - **Monitoring and Logging**
-
     - Will deploy and leverage Microsoft Sentinel SIEM
     - Create data collections rule, deploy agent to collect and forward security Event logs from endpoints
     - Will integrate Microsoft and third-party produts/services with sentinel, collect and analyze security data using connectors
@@ -40,8 +38,9 @@ Activities involve:
     - Create/deploy logic app/playbook in Sentinel.
     - Automate threat response using Playbook and Automation Rules.
 
-- **Azure Firewall:**
+- **Deploy and Configure Azure Firewall, ingest logs in Microsoft Sentinel:**
     - Deploy Azure Firewall to protect my virtual networks and control traffic flows
+    - Ingest firewall logs to Microsoft Sentinel for security analysis, alerts and and incident investigation.
 
 _______________________________________________________________________________________
 
@@ -264,4 +263,5 @@ This proves that my detection analytics are working correctly.
 
 
 
-
+- **Deploy and Configure Azure Firewall, ingest logs in Microsoft Sentinel:**
+    - I have completed a dedicated project on firewall deployment and configuration here on another repo: 

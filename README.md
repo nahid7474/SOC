@@ -9,7 +9,7 @@ Activities involve:
     - Create Organizational Unit (OU), domain users, and configure NAT and routing
     - Utilize PowerShell scripts to create domain users in Active Directory and machine onboarding
 
-- **Microsoft Tenant and Azure Subscription** set up:
+- **Microsoft Tenant and Azure Subscription set up**:
     - Configure Microsoft 365 admin center
     - Microsoft Defender Security Center
     - Microsoft Azure Portal
@@ -185,7 +185,8 @@ These accounts exists on my Domain Controller.
 - Will deploy and leverage Microsoft Sentinel SIEM
 - Create data collections rule, deploy agent to collect and forward security Event logs from endpoints
 - Will integrate Microsoft and third-party produts/services with sentinel, collect and analyze security data using connectors
--------------------------------------------------------------------------------------------------------------------------------    
+
+   
 Will start by creating a Resource Group and name it HomeLab.
 On the Azure portal, search for resource group and select to create one. 
 
@@ -341,7 +342,57 @@ This proves that my detection analytics are working correctly.
 
 **Next: Threat response using Playbook and Automation Rules**
 
+I will start by creating a simple logic app that will notify security analyst when an incident is created.
+search for Logic app on azure portal, select Logic apps
 
+![image](https://github.com/nahid7474/SOC/assets/170605912/a7bd3640-8abc-4346-bbc6-c2a0200caf4e)
+
+Select the appropriate subscription and resource group, I'll name it Get-VirusTotalDomainReport-IncidentTriggeredk, Review + create
+
+![image](https://github.com/nahid7474/SOC/assets/170605912/b6b29abe-5d35-4b66-9fc9-656290b78739)
+
+
+
+
+**Logic App Workflow Description: **
+
+Thhis logic app is triggered whenever a new incident is detected or updated in Microsoft Sentinel.
+Once triggered add an Action - Entities - Get URLs: Retrieve URLs associated with the incident from Microsoft Sentinel.
+For each URL retrieved, add a controll with a for loop to iterate through each URL retrieved in the previous step to process them individually.
+Next Action - Get Domain Report: analysis on each URL to obtain a domain report. 
+The next Control - Condition: Evaluate the results obtained from the domain report to determine the next steps based on a condition:
+If True: Proceed with sending data and adding a comment to the incident in Microsoft Sentinel.
+Action: Send relevant data (such as domain reputation, threat score) to the incident in Microsoft Sentinel.
+Action: Add a comment to the incident detailing the analysis and findings from the domain report.
+If False: Proceed with sending data to the incident in Microsoft Sentinel as a comment without additional actions based on the domain report.
+Action: Send relevant data (e.g., URL information) to the incident in Microsoft Sentinel as a comment.
+
+![image](https://github.com/nahid7474/SOC/assets/170605912/3ce90620-e4d8-4eae-89bc-1441543a8373)
+
+CLick run once VirusTotal API connection is established
+
+![image](https://github.com/nahid7474/SOC/assets/170605912/cf4354b7-b9a6-48af-b709-ee396b3cac53)
+
+It now runs error free, I will give my Sentinel permission to run this playbook when an incident is created.
+To do that, navigate to the Automation menu on the left bottom, choose HomeLab resource group. Click Apply
+
+![image](https://github.com/nahid7474/SOC/assets/170605912/4a779490-fb40-4074-8de9-3360df33a8fa)
+
+
+Next, associate this playbook with an automation rule.
+To do this, click create a new automation rule from the automation menu on the left
+
+![image](https://github.com/nahid7474/SOC/assets/170605912/1aee8dec-a93d-4335-9a61-d9ccd9f9d341)
+
+Give it a name: Get a VT report against bad URL
+Set a trigger as "When incident is created", condition should include all providers and detection rules and Action is Run a playbook
+select the plabook with order 1, Click Apply at the bottom.
+
+
+
+![image](https://github.com/nahid7474/SOC/assets/170605912/f94bdef4-14fb-40b0-892b-9c5ddc289051)
+
+We have now a working playbook with an automation rule in place. 
 
 
 - **Deploy and Configure Azure Firewall, ingest logs in Microsoft Sentinel:**

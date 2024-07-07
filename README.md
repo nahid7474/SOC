@@ -349,7 +349,7 @@ search for Logic app on azure portal, select Logic apps
 
 Select the appropriate subscription and resource group, I'll name it Get-VirusTotalDomainReport-IncidentTriggeredk, Review + create
 
-![image](https://github.com/nahid7474/SOC/assets/170605912/b6b29abe-5d35-4b66-9fc9-656290b78739)
+![image](https://github.com/nahid7474/SOC/assets/170605912/afc864a1-1e37-4c08-9c2d-dbb24d223d8d)
 
 
 

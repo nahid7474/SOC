@@ -42,6 +42,7 @@ Activities involve:
     - Deploy Azure Firewall to protect my virtual networks and control traffic flows
     - Ingest firewall logs to Microsoft Sentinel for security analysis, alerts and and incident investigation.
 
+- **Configure Microsoft Threat Intelligence Feed, ingest feed/logs to Microsoft Sentinel:**
 _______________________________________________________________________________________
 
 **Infrastructure Setup**
@@ -86,7 +87,6 @@ They are all here, and I am good to go.
 
 
 - **Deploy and Connect Microsoft Defender XDR to cover:**
-
     - Microsoft Defender for Identity
     - Microsoft Defender for Endpoints
     - Microsoft Defender for Cloud Apps
@@ -120,10 +120,58 @@ Will go back to the MDE portal > Device Inventory, I can locate the newly onboar
 
 ![image](https://github.com/nahid7474/SOC/assets/170605912/13aa324e-51f4-4340-9483-062b5a7b5211)
 
+This activity should also create a test alert for MDE as we have run a script, which it did.
 
+![image](https://github.com/nahid7474/SOC/assets/170605912/c25d29e7-745d-467b-bf56-96c619849967)
+
+
+Now to verify that alerts are being copied to Sentinel, I will navigate to Sentinel and find the alert there.
+And here it is.
+
+![image](https://github.com/nahid7474/SOC/assets/170605912/3e0e3e13-4031-4f74-b6f3-6889f429c664)
+
+This alert in Defender and Sentinel further validates that I have configured Defender for Enpoints correctly and alerts are getting cloned/generated in Sentinel as expected.
+-------------------------------------------------------------------------------------------------------------------------------
+- **Configure Defender for Identity**
+
+First step: Install Identity Senson on Domain Controler: Navigate to Settings on Microsoft Defender Portal > click Identities
+
+![image](https://github.com/nahid7474/SOC/assets/170605912/56afc834-f482-4cb1-855a-72af2fe30956)
+
+Click Add sensor.
+
+![image](https://github.com/nahid7474/SOC/assets/170605912/4c0e2f99-f1ef-4a05-a074-ae2bd57d8c99)
+
+Will now go into my Domain controller and download the sensor from there, run the Azure ATP sensor setup exeutable file. 
+
+![image](https://github.com/nahid7474/SOC/assets/170605912/c13d2b78-dd7a-4f65-91a3-8b07c12154dc)
+![image](https://github.com/nahid7474/SOC/assets/170605912/0a189cfd-23b6-456a-a809-0bc43c9aa592)
+![image](https://github.com/nahid7474/SOC/assets/170605912/2e127b50-73cf-44aa-9d94-ae6ece2807b3)
+
+
+Copy the Access key, this will be required during the instalation process. 
+
+![image](https://github.com/nahid7474/SOC/assets/170605912/6bfcd681-87a5-407d-972f-d7e312dd1280)
+
+Click Next
+
+![image](https://github.com/nahid7474/SOC/assets/170605912/5fdc2ff9-5ef2-4b70-b097-025897b05165)
+
+Click Finish, it's successfully done.
+
+![image](https://github.com/nahid7474/SOC/assets/170605912/83dc0555-7ae0-4fea-b523-e993a4125345)
+
+
+Next, Create a Directory services accounts as per the second requirements for MDI.
+Click Add credentials.
+
+![image](https://github.com/nahid7474/SOC/assets/170605912/3faeb990-d60c-4f4c-b1ff-31208474b8fc)
+
+
+
+Create MDE account to sync with the portal 
 ----------------------------------------------------------------------------------------------------------------------------------------
 **Monitoring and Logging** 
-
 - Will deploy and leverage Microsoft Sentinel SIEM
 - Create data collections rule, deploy agent to collect and forward security Event logs from endpoints
 - Will integrate Microsoft and third-party produts/services with sentinel, collect and analyze security data using connectors
@@ -225,6 +273,12 @@ And I can see my connected VMs where these data are coming from.
 
 ![image](https://github.com/nahid7474/SOC/assets/170605912/2ad36d58-3481-494d-b094-3852015f174b)
 
+I will also verify from Sentinel that I am getting data from my VM by running this simple KQL query below.
+
+![image](https://github.com/nahid7474/SOC/assets/170605912/c804819d-1935-4b0d-974e-bd26c4afdb24)
+
+And, I got results from my  confirming that data are being ingested correctly. 
+
 
 Next, Threat detection with Microsoft Sentinel analytics using out of box detection rules and custom analytics rule.
 To deploy out of box detection rules, navigate to Analytics section, click on 3 dots next to the Rule template and click Create.
@@ -282,3 +336,7 @@ This proves that my detection analytics are working correctly.
 
 - **Deploy and Configure Azure Firewall, ingest logs in Microsoft Sentinel:**
     - I have completed a dedicated project on firewall deployment and configuration here on another repo: https://github.com/nahid7474/Firewall
+ 
+To ingest firewall log, 
+
+

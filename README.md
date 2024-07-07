@@ -7,7 +7,7 @@ Activities involve:
 
 - **Infrastructure Setup** :
     - Install and configure Windows Server 2019 with Active Directory, DHCP, DNS
-    - Create Organizational Unit (OU) for domain users (both admin and standard users), and configure NAT
+    - Create Organizational Unit (OU), domain users, and configure NAT and routing
     - Utilize PowerShell scripts to create domain users in Active Directory and machine onboarding
 
 - **Deploy and Connect Microsoft Defender XDR to cover:**

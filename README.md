@@ -15,6 +15,12 @@ Activities involve:
     - Microsoft Defender Security Center
     - Microsoft Azure Portal
 
+- **Onboard a device to Microsoft Defender for Endpoint (MDE) using powershel script**
+
+- **Configure Defender for Identity**
+    - Install Identity Senson on Domain Controler
+    - Create MDE account to sync with the portal 
+
 - **Deploy and Connect Microsoft Defender XDR to cover:**
 
     - Microsoft Defender for Identity
@@ -88,7 +94,17 @@ They are all here, and I am good to go.
     - Microsoft Defender Office365
     - Microsoft Defender Alerts
  
-  
+  First step: onboard a device to Microsoft Defender for Endpoint (MDE) using powershel script.
+  To achive this, I'll head to Microsoft Defender admin portal.
+  From here will navigate to Settings > Endpoints
+
+  ![image](https://github.com/nahid7474/SOC/assets/170605912/51fe85e4-2b62-47af-8058-e2827184d4c9)
+
+  On the Device Management > click Onboarding, then click Download onboarding package on the target machine
+
+  ![image](https://github.com/nahid7474/SOC/assets/170605912/b6a491f0-78df-4caf-9115-9ba93056a6c1)
+
+
 ----------------------------------------------------------------------------------------------------------------------------------------
 **Monitoring and Logging** 
 
@@ -242,6 +258,8 @@ I will now assign one analyst to investigate this incident.
 
 This proves that my detection analytics are working correctly. 
 
+
+**Next: Threat response using Playbook and Automation Rules**
 
 
 

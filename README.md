@@ -264,4 +264,4 @@ This proves that my detection analytics are working correctly.
 
 
 - **Deploy and Configure Azure Firewall, ingest logs in Microsoft Sentinel:**
-    - I have completed a dedicated project on firewall deployment and configuration here on another repo: 
+    - I have completed a dedicated project on firewall deployment and configuration here on another repo: https://github.com/nahid7474/Firewall

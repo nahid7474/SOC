@@ -29,7 +29,8 @@ Activities involve:
     - Create data collections rule, deploy agent to collect and forward security Event logs from endpoints
     - Will integrate Microsoft and third-party produts/services with sentinel, collect and analyze security data using connectors
 
-- **Incident Response:** 
+- **Threat Detection and Incident Response:** 
+    - Deploy Out of Box Sentinel Analytics rule, create custom detection rule based on Mitre TTP 
     - Create/deploy logic app/playbook in Sentinel.
     - Automate threat response using Playbook and Automation Rules.
 
@@ -191,6 +192,58 @@ Now that I have data collection rule created, I'll go to te connector page for W
 And I can see my connected VMs where these data are coming from.
 
 ![image](https://github.com/nahid7474/SOC/assets/170605912/2ad36d58-3481-494d-b094-3852015f174b)
+
+
+Next, Threat detection with Microsoft Sentinel analytics using out of box detection rules and custom analytics rule.
+To deploy out of box detection rules, navigate to Analytics section, click on 3 dots next to the Rule template and click Create.
+
+![image](https://github.com/nahid7474/SOC/assets/170605912/c6d5f1fb-55b1-4b57-876f-df9eab4700fa)
+
+
+Check the Name and Description, Severity and MITRE ATT&CK and click Next: Set rule logic.
+
+![image](https://github.com/nahid7474/SOC/assets/170605912/fae2e4ca-d0d5-429c-8e04-0ed7d4fe6f30)
+
+
+Test the rule logic/query, schedule it as expected, do the entity mapping, click Next: Incident settings
+
+
+![image](https://github.com/nahid7474/SOC/assets/170605912/e364afee-f116-4ede-b519-d0a3eaa27d4a)
+![image](https://github.com/nahid7474/SOC/assets/170605912/779bc339-8f82-4f4f-b723-bacd9854b867)
+
+Enable Incident settings, and alert grouping as appropriate, click Next: Automated response
+
+![image](https://github.com/nahid7474/SOC/assets/170605912/52c8881e-436f-410a-a9a1-9e48a91b749d)
+
+Will leave the automated respose as it is (will do the automation later), click Nest to Review+ Create
+Once validation passed, click Save and now I have an active/enabled detection rule.
+
+![image](https://github.com/nahid7474/SOC/assets/170605912/98c8b738-c32d-4b3d-9ac3-0aa28c811a30)
+
+
+For my Sentinel instance, I've created 15 rules, including 4 highs and 11 mediums.
+
+![image](https://github.com/nahid7474/SOC/assets/170605912/bec5c887-3b10-4f50-81f0-05df5d1bd3f3)
+
+**Next, I'll now test to validate my detection rules are working.**
+
+Now that I have a detection rule to detect Local "Admin Group Changes" related activit, I'll exactly do so; 
+I will create a new admin user nahid2
+
+![image](https://github.com/nahid7474/SOC/assets/170605912/5b5cf133-512b-4766-a3df-fe3ff93af811)
+
+Now I'll add this user to Security Administrator group which should trigger an alarm, and it did as expected.
+
+![image](https://github.com/nahid7474/SOC/assets/170605912/af8f3ac5-4990-445a-bf55-923048fa9bcd)
+
+I will now assign one analyst to investigate this incident.
+
+![image](https://github.com/nahid7474/SOC/assets/170605912/832e9c3a-e2e5-4b0b-ab4b-133bec8656da)
+
+This proves that my detection analytics are working correctly. 
+
+
+
 
 
 

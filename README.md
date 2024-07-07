@@ -187,8 +187,6 @@ Now that I have data collection rule created, I'll go to te connector page for W
 ![image](https://github.com/nahid7474/SOC/assets/170605912/b5aa9119-33ec-4044-a66c-f2cb45c003cd)
 
 
-![image](https://github.com/nahid7474/SOC/assets/170605912/27401aa8-1b77-4db8-8849-70233e40c103)
-
 
 And I can see my connected VMs where these data are coming from.
 

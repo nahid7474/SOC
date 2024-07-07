@@ -103,6 +103,23 @@ They are all here, and I am good to go.
 
   ![image](https://github.com/nahid7474/SOC/assets/170605912/b6a491f0-78df-4caf-9115-9ba93056a6c1)
 
+  Logged onto my VM and ran the downloaded script that came in the package as an admin.
+  
+![image](https://github.com/nahid7474/SOC/assets/170605912/87daae6d-0b42-4bdc-ab3d-f69d933088ef)
+
+
+Script ran suucessfully, device onboarded successfully.
+
+![image](https://github.com/nahid7474/SOC/assets/170605912/8067a2bd-5106-4831-872d-3c6408a7c6e9)
+
+Will now run the sc query sense command to test the device status and confirm device is successfully onboarded
+
+![image](https://github.com/nahid7474/SOC/assets/170605912/4e566ed1-2857-4ce9-b67b-221c9282c691)
+
+Will go back to the MDE portal > Device Inventory, I can locate the newly onboarded device confirming this device onboarded succeefully.
+
+![image](https://github.com/nahid7474/SOC/assets/170605912/13aa324e-51f4-4340-9483-062b5a7b5211)
+
 
 ----------------------------------------------------------------------------------------------------------------------------------------
 **Monitoring and Logging** 

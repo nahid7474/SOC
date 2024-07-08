@@ -14,6 +14,8 @@ Activities involve:
     - Microsoft Defender Security Center
     - Microsoft Azure Portal
 
+- **Install and Configure Azure AD Connect (now Microsoft Entra Connect) tool to Sync On-Premises Active Directory** 
+
 - **Configure Defender for Endpoint (MDE)**
     - Onboard device to Microsoft Defender for Endpoint (MDE) using powershel script
 
@@ -84,6 +86,48 @@ To verify that I have licenced my admin account NNN@trialsc200lab.onmicrosoft.co
 They are all here, and I am good to go. 
 
 ![image](https://github.com/nahid7474/SOC/assets/170605912/39195f97-5451-409f-842d-5870dc0696b8)
+
+
+- **Install and Configure Azure AD Connect tool to Sync On-Premises Active Directory**
+- This tool will synchronize our on premises active directory with azure active directory to create a hybrid environment.
+- Advantage of using this: users can use single sign-on or password reset in microsoft 365
+
+To achieve this, navigate to Microsoft Entra admin center here https://entra.microsoft.com/ from my domain controller
+Log in with the same global admin account, click Go to Microsoft Entra Connect
+
+![image](https://github.com/nahid7474/SOC/assets/170605912/7af22e08-3208-4872-bb70-b22e673d12e9)
+
+Click Download Microsoft Entra Connect
+
+![image](https://github.com/nahid7474/SOC/assets/170605912/2c4def55-2ff1-469d-95fd-964c0412225e)
+
+Click Download
+
+![image](https://github.com/nahid7474/SOC/assets/170605912/034aa11c-4fd0-4111-9b78-cf22ec47b3c7)
+
+Run the installer, use global admin account to conncet to the domain.
+
+![image](https://github.com/nahid7474/SOC/assets/170605912/c89ef65c-f5af-4f53-b5ab-4cd75fa8cb4a)
+
+Sign in as a Gbobal admin to conect to the Azure Portal
+
+Enter the Active Directory Domain enterprise administrator credentials, click Next
+
+![image](https://github.com/nahid7474/SOC/assets/170605912/f3a21170-dae7-4c93-ae34-489f4724989a)
+
+Click Next
+
+![image](https://github.com/nahid7474/SOC/assets/170605912/ee1bb514-aca2-49ca-9d48-ef0a9f98c796)
+
+Make sure the box is ticked for Start the Synchronization Proces
+CLick Install
+
+![image](https://github.com/nahid7474/SOC/assets/170605912/8a54145e-d609-4675-9602-5c1a58048af8)
+
+COnfiguration complete, click Exit
+
+![image](https://github.com/nahid7474/SOC/assets/170605912/e3be4d08-72e1-4a4c-a9db-c393e76359a8)
+
 
 
 - **Deploy and Connect Microsoft Defender XDR to cover:**

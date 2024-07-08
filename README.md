@@ -21,7 +21,7 @@ Activities involve:
 
 - **Configure Defender for Identity**
     - Install Identity Senson on Domain Controler
-    - Create MDE account to sync with the portal 
+    - setup a gMSA account in Domain controller using Powershel, sync with the portal 
 
 - **Deploy and Connect Microsoft Defender XDR to cover:**
     - Microsoft Defender for Identity
@@ -182,7 +182,7 @@ This alert in Defender and Sentinel further validates that I have configured Def
 -------------------------------------------------------------------------------------------------------------------------------
 - **Configure Defender for Identity**
 
-First step: Install Identity Senson on Domain Controler: Navigate to Settings on Microsoft Defender Portal > click Identities
+First step: Install Identity Sensor on Domain Controler: Navigate to Settings on Microsoft Defender Portal > click Identities
 
 ![image](https://github.com/nahid7474/SOC/assets/170605912/56afc834-f482-4cb1-855a-72af2fe30956)
 
@@ -208,6 +208,10 @@ Click Next
 Click Finish, it's successfully done.
 
 ![image](https://github.com/nahid7474/SOC/assets/170605912/83dc0555-7ae0-4fea-b523-e993a4125345)
+
+Sensor is running, an healthy
+
+![image](https://github.com/nahid7474/SOC/assets/170605912/ace4b7a8-66e2-452d-8360-967262aa5eb4)
 
 
 Next, Create a Directory services accounts as per the second requirements for MDI.

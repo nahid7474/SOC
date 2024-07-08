@@ -88,9 +88,10 @@ They are all here, and I am good to go.
 ![image](https://github.com/nahid7474/SOC/assets/170605912/39195f97-5451-409f-842d-5870dc0696b8)
 
 
-- **Install and Configure Azure AD Connect tool to Sync On-Premises Active Directory**
-- This tool will synchronize our on premises active directory with azure active directory to create a hybrid environment.
-- Advantage of using this: users can use single sign-on or password reset in microsoft 365
+**Install and Configure Azure AD Connect tool to Sync On-Premises Active Directory**
+
+This tool will synchronize our on premises active directory with azure active directory to create a hybrid environment.
+Advantage of using this: users can use single sign-on or password reset in microsoft 365
 
 To achieve this, navigate to Microsoft Entra admin center here https://entra.microsoft.com/ from my domain controller
 Log in with the same global admin account, click Go to Microsoft Entra Connect

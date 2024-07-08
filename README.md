@@ -215,22 +215,34 @@ Sensor is running, an healthy
 
 
 Next, Create a Directory services accounts as per the second requirements for MDI.
-Click Add credentials, create the account.
+
+Will move onto my DC, open Pwershell as an administrator, and run the below powershell command to add the account 
+
+$gMSA_AccountName = 'mdiSvc01'
+$gMSA_HostsGroupName = 'Domain Controllers'
+Import-Module ActiveDirectory
+if ($gMSA_HostsGroupName -eq 'Domain Controllers') {
+    $gMSA_HostsGroup = Get-ADGroup -Identity 'Domain Controllers'
+} else {
+    $gMSA_HostsGroup = New-ADGroup -Name $gMSA_HostsGroupName -GroupScope DomainLocal -PassThru
+    $gMSA_HostNames | ForEach-Object { Get-ADComputer -Identity $_ } |
+        ForEach-Object { Add-ADGroupMember -Identity $gMSA_HostsGroupName -Members $_ }
+}
+New-ADServiceAccount -Name $gMSA_AccountName -DNSHostName "$gMSA_AccountName.$env:nahidhomelab.com" `
+ -PrincipalsAllowedToRetrieveManagedPassword $gMSA_HostsGroup
+
+ Account has been created successfuly. 
+
+![image](https://github.com/nahid7474/SOC/assets/170605912/86be92b4-635b-47a4-a493-341149c26a42)
+
+Head back to the Defender portal, Click Add credentials, create the account.
 
 ![image](https://github.com/nahid7474/SOC/assets/170605912/3faeb990-d60c-4f4c-b1ff-31208474b8fc)
 
 Account is now showing up on the portal.
 
-![image](https://github.com/nahid7474/SOC/assets/170605912/e1618fc5-dfc4-4e79-aecb-8162e898058d)
+![image](https://github.com/nahid7474/SOC/assets/170605912/9bdafbf2-d1fd-4f8c-9b7b-9cc21c23446d)
 
-
-MDI account is syncing my AD users on prem. I can veryfily that from the Entity tags > Sensitive area
-
-![image](https://github.com/nahid7474/SOC/assets/170605912/17e0d087-d804-48b9-8265-36252226b1f2)
-
-These accounts exists on my Domain Controller.
-
-![image](https://github.com/nahid7474/SOC/assets/170605912/5110ea85-ecae-4c13-bd20-b10d731198e0)
 
 
 **Monitoring and Logging** 

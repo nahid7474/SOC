@@ -124,10 +124,13 @@ CLick Install
 
 ![image](https://github.com/nahid7474/SOC/assets/170605912/8a54145e-d609-4675-9602-5c1a58048af8)
 
-COnfiguration complete, click Exit
+Configuration complete, click Exit
 
 ![image](https://github.com/nahid7474/SOC/assets/170605912/e3be4d08-72e1-4a4c-a9db-c393e76359a8)
 
+I can verify that all my active directory users have been successfully synchronized with Azure AD/Microsoft Entra ID, including the synchronization service account. 
+
+![image](https://github.com/nahid7474/SOC/assets/170605912/8a9b5dfd-6442-47e9-983a-ef6626933e6c)
 
 
 - **Deploy and Connect Microsoft Defender XDR to cover:**

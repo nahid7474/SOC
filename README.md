@@ -1,6 +1,6 @@
 Project: Build Security Operations Center (SOC) with Microsoft
 ____________________________________________________________________________________
-In this project, I'll leverage a combination of Microsoft security solutions/tools and services designed to monitor, detect, and respond to security incidents. 
+In this project, I'll leverage a combination of Microsoft security products designed to monitor, detect, and respond to security incidents and build SOC step by step. 
 
 Activities involve:
 

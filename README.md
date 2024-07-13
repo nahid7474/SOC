@@ -156,7 +156,7 @@ I can verify that all my active directory users have been successfully synchroni
 ![image](https://github.com/nahid7474/SOC/assets/170605912/87daae6d-0b42-4bdc-ab3d-f69d933088ef)
 
 
-Script ran suucessfully, device onboarded successfully.
+Script ran successfully, device onboarded successfully.
 
 ![image](https://github.com/nahid7474/SOC/assets/170605912/8067a2bd-5106-4831-872d-3c6408a7c6e9)
 

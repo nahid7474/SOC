@@ -179,7 +179,9 @@ And here it is.
 ![image](https://github.com/nahid7474/SOC/assets/170605912/3e0e3e13-4031-4f74-b6f3-6889f429c664)
 
 This alert in Defender and Sentinel further validates that I have configured Defender for Enpoints correctly and alerts are getting cloned/generated in Sentinel as expected.
--------------------------------------------------------------------------------------------------------------------------------
+
+
+
 - **Configure Defender for Identity**
 
 First step: Install Identity Sensor on Domain Controler: Navigate to Settings on Microsoft Defender Portal > click Identities

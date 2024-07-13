@@ -17,7 +17,7 @@ Activities involve:
 - **Install and Configure Azure AD Connect (now Microsoft Entra Connect) tool to Sync On-Premises Active Directory** 
 
 - **Configure Defender for Endpoint (MDE)**
-    - Onboard device to Microsoft Defender for Endpoint (MDE) using powershel script
+    - Onboard device to Microsoft Defender for Endpoint (MDE) using powershell script
 
 - **Configure Defender for Identity**
     - Install Identity Senson on Domain Controler

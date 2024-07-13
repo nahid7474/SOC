@@ -324,7 +324,19 @@ I can now see that I have started getting data from Entra ID as well.
 ![image](https://github.com/nahid7474/SOC/assets/170605912/93006cc6-cc32-4ce6-861b-663d9db2c751)
 
 
-Next, Collect windows security events via agent.
+Will now also Turn on the UEBA feature and configure Entity behavior.  
+Check all required boxed and click Apply.  
+
+![image](https://github.com/user-attachments/assets/bafac54e-02b2-4a01-87b4-61493b6caaf6)
+
+To verify, UEBA feature is worrking and logs are being ingested correctly, navigare to Sentinel and locate Microsoft Sentinel UEBA.  
+Run IdentityInfor table and we get results, validating that I am getting UEBA related logs in my sentinel.   
+
+![image](https://github.com/user-attachments/assets/8aecf475-094c-4ed1-a477-f011e87ff09a)
+
+
+
+Next stop, **Collect windows security events via agent.**
 First I ned a data collection rule, to get a rule go to the Log Analytics Workspace > Setting > Aents> Data Collection Rule.
 
 ![image](https://github.com/nahid7474/SOC/assets/170605912/fd6a6e29-2247-40c7-ab35-fc21ddde7f53)

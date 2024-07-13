@@ -21,7 +21,7 @@ Activities involve:
 
 - **Configure Defender for Identity**
     - Install Identity Senson on Domain Controler
-    - setup a gMSA account in Domain controller using Powershel, sync with the portal 
+    - setup a gMSA account in Domain controller using Powershell, sync with the portal 
 
 - **Deploy and Connect Microsoft Defender XDR to cover:**
     - Microsoft Defender for Identity

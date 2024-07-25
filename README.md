@@ -45,6 +45,8 @@ Activities involve:
     - Ingest firewall logs to Microsoft Sentinel for security analysis, alerts and and incident investigation.
 
 - **Configure Microsoft Threat Intelligence Feed, ingest feed/logs to Microsoft Sentinel:**
+- **IOC Management**  
+
 _______________________________________________________________________________________
 
 **Infrastructure Setup**
@@ -495,5 +497,12 @@ And I can see results indicating that I am getting logs as I configured.
 
 
 
+**IOC Management  **
 
+In the navigation pane, select Settings > Endpoints > Indicators (under Rules).  
+
+Add IOCs (IP, hashes, domains) here to action on them (i.e. block)  
+
+
+![image](https://github.com/user-attachments/assets/e11e775e-6d81-4b0c-9919-4f3ebfcf86fa)
 
